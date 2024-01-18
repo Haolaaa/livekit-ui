@@ -82,6 +82,8 @@ export default function HostControls({ slug }: Props) {
             } else {
                 const screens = await localParticipant.createScreenTracks({
                     resolution: VideoPresets.h2160,
+                    audio: true,
+                    systemAudio: "include",
                 });
 
                 screens.forEach((screen) => {
