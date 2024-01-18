@@ -28,9 +28,9 @@ export default function CreateIngressForm({
 }: {
     slug?: string | undefined;
 }) {
-    // @typescript-eslint/no-unused-vars
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const [ingress, setIngress] = useState<IngressInfo | undefined>();
-    // @typescript-eslint/no-unused-vars
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const [roomSlug, setRoomSlug] = useState<string | undefined>(slug);
     const [urlCopied, setUrlCopied] = useState(false);
     const [keyCopied, setKeyCopied] = useState(false);
@@ -43,8 +43,8 @@ export default function CreateIngressForm({
         },
     });
 
-    // @typescript-eslint/no-unused-vars
-    const onSubmit = async (values: any) => {};
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    // const onSubmit = async (values: ) => {};
 
     const onCopyUrl = () => {
         setUrlCopied(true);
@@ -67,7 +67,6 @@ export default function CreateIngressForm({
                         <form
                             onSubmit={(e) => {
                                 e.preventDefault();
-                                void form.handleSubmit(onSubmit)(e);
                             }}
                             className="flex flex-col gap-4"
                         >
