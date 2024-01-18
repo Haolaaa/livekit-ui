@@ -17,7 +17,6 @@ interface Props {
 export default function HostControls({ slug }: Props) {
     const [videoTrack, setVideoTrack] = useState<LocalTrack>();
     const [audioTrack, setAudioTrack] = useState<LocalTrack>();
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const [screenTrack, setScreenTrack] = useState<LocalTrack>();
     const [isPublishing, setIsPublishing] = useState(false);
     const [isUnpublishing, setIsUnpublishing] = useState(false);
@@ -89,6 +88,7 @@ export default function HostControls({ slug }: Props) {
                     void localParticipant.publishTrack(screen, {});
                     if (previewVideoEl?.current) {
                         screen.attach(previewVideoEl.current);
+                        setScreenTrack(screen);
                     }
                 });
             }
